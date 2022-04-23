@@ -1,0 +1,10 @@
+environment:
+  STRIPE_SECRET_KEY: ${STRIPE_SECRET_KEY}
+  STRIPE_WEBHOOK_ENDPOINT_SECRET: ${STRIPE_WEBHOOK_ENDPOINT_SECRET}
+packages:
+  - name: payments
+  - name: webhooks
+    actions:
+    - name: stripe_webhook
+      web: raw
+

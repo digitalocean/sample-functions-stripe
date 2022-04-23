@@ -1,0 +1,6 @@
+.nimbella
+__deployer__.zip
+__pycache__/
+node_modules
+.env
+.DS_Store

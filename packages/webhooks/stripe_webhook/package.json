@@ -1,0 +1,8 @@
+{
+  "name": "stripe-payment",
+  "version": "0.1.0",
+  "main": "index.js",
+  "dependencies": {
+    "stripe": "^8.202.0"
+  }
+}
