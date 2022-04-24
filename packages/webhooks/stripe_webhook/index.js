@@ -35,7 +35,7 @@ async function main(args) {
   let errorMessage = '';
 
   switch (event['type']) {
-    case 'payment_intent.created': 
+    case 'payment_intent.created':
       intent = event.data.object
       console.log('🔄 Payment Intent Created:', intent.id)
     case 'payment_intent.succeeded':
@@ -47,7 +47,7 @@ async function main(args) {
       intent = event.data.object;
       errorMessage = intent.last_payment_error && intent.last_payment_error.message;
       break;
-    default: 
+    default:
       return {
         statusCode: 200,
         body: {
