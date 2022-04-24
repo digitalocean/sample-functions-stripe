@@ -7,7 +7,7 @@ const stripe = require("stripe")(STRIPE_SECRET_KEY);
 async function main(args) {
   const sig = args.__ow_headers['stripe-signature'];
 
-  console.log('PAYLOAD => ', payload)
+  console.log('PAYLOAD => ', args.__ow_body)
   console.log('ARGS => ', args)
 
   /**
