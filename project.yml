@@ -5,9 +5,9 @@ packages:
   - name: payments
     actions:
     - name: stripe
-
   - name: webhooks
     actions:
     - name: stripe_webhook
-      web: raw
+      web: true
+      raw: true
   
