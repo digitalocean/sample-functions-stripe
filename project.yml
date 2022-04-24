@@ -9,5 +9,4 @@ packages:
     actions:
     - name: stripe_webhook
       web: true
-      raw: true
   
