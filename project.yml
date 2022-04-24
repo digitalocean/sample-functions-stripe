@@ -8,5 +8,6 @@ packages:
   - name: webhooks
     actions:
     - name: stripe_webhook
-      web: true
+      annotations: 
+        raw-http: true
   
