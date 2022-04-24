@@ -11,10 +11,13 @@ async function main(args) {
    * To validate the payload signature we must use the 
    * exact request body sent from the stripe API request. 
    * To prevent the platform from parsing the request content, 
-   * we must set "web=raw" in the functions configuration
+   * we must set "annotations.raw-http=true" in the functions configuration
    */
   const payload = new Buffer.from(args.__ow_body, 'base64')
 
+  console.log('PAYLOAD => ', payload)
+  console.log('ARGS => ', args)
+  
   let event = null;
   try {
     event = stripe.webhooks.constructEvent(payload, sig, STRIPE_WEBHOOK_ENDPOINT_SECRET);
