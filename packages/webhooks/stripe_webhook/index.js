@@ -8,10 +8,10 @@ async function main(args) {
   const sig = args.__ow_headers['stripe-signature'];
 
   /**
-   * To validate the payload signature we must use the 
-   * exact request body sent from the stripe API request. 
+   * To validate the stripe payload signature we must use the 
+   * exact request body sent from the stripe request. 
    * To prevent the platform from parsing the request content, 
-   * we must set "annotations.raw-http=true" in the functions configuration
+   * we must set "web=raw" in the functions configuration
    */
   const payload = new Buffer.from(args.__ow_body ?? '', 'base64')
 
