@@ -7,9 +7,6 @@ const stripe = require("stripe")(STRIPE_SECRET_KEY);
 async function main(args) {
   const sig = args.__ow_headers['stripe-signature'];
 
-  console.log('PAYLOAD => ', args.__ow_body)
-  console.log('ARGS => ', args)
-
   /**
    * To validate the payload signature we must use the 
    * exact request body sent from the stripe API request. 
@@ -58,8 +55,6 @@ async function main(args) {
         }
       }
   }
-
-  // Do anything here. possibly notify using other providers like Slack.
 
   return {
     statusCode: 200,
