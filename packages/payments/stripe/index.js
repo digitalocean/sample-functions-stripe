@@ -19,7 +19,7 @@ async function main(args) {
       amount,
       currency,
     });
-
+    console.log('Intent created ', paymentIntent)
     return {
       statusCode: 200,
       body: {
