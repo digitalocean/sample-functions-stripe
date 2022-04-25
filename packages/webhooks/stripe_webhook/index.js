@@ -21,7 +21,7 @@ async function main(args) {
   try {
     event = stripe.webhooks.constructEvent(payload, sig, STRIPE_WEBHOOK_ENDPOINT_SECRET);
   } catch (err) {
-    console.err(`Unable to validate payload for ${payload.id}`)
+    console.error(`Unable to validate payload for ${payload.id}`)
     return {
       statusCode: 400,
       body: {
