@@ -1,6 +1,7 @@
 environment:
   STRIPE_SECRET_KEY: ${STRIPE_SECRET_KEY}
   STRIPE_WEBHOOK_ENDPOINT_SECRET: ${STRIPE_WEBHOOK_ENDPOINT_SECRET}
+  LOG_DESTINATIONS: ${LOG_DESTINATIONS}
 packages:
   - name: payments
     actions:
@@ -8,4 +9,4 @@ packages:
   - name: webhooks
     actions:
     - name: stripe_webhook
-      web: raw
+      web: true
