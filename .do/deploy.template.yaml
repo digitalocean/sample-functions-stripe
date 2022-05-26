@@ -16,7 +16,6 @@ spec:
   static_sites:
     - name: 'site'
       build_command: npm build
-      output_dir: '/build'
       git:
         branch: main
         repo_clone_url: https://github.com/ddebarros/sample-functions-stripe.git
