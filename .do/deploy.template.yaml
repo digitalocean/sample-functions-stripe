@@ -8,11 +8,21 @@ spec:
       source_dir: "/"
       routes: 
         - path: '/api'
+      envs: 
+        - key: STRIPE_SECRET_KEY
+          value: <REPLACE_ME>
+        - key: STRIPE_WEBHOOK_ENDPOINT_SECRET
+          value: <REPLACE_ME>
   static_sites:
     - name: 'site'
+      build_command: npm build
+      output_dir: '/build'
       git:
         branch: main
         repo_clone_url: https://github.com/ddebarros/sample-functions-stripe.git
       source_dir: "/"
       routes:
         - path: '/'
+      envs: 
+        - key: REACT_APP_STRIPE_PUBLISHABLE_KEY
+          value: <REPLACE_ME>
