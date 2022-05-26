@@ -15,7 +15,7 @@ spec:
           value: <REPLACE_ME>
   static_sites:
     - name: 'site'
-      build_command: npm build
+      build_command: npm run build
       git:
         branch: main
         repo_clone_url: https://github.com/ddebarros/sample-functions-stripe.git
