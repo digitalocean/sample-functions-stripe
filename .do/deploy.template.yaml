@@ -1,0 +1,18 @@
+spec:
+  name: sample-functions-stripe
+  functions:
+    - name: function-api
+      git:
+        branch: main
+        repo_clone_url: https://github.com/ddebarros/sample-functions-stripe.git
+      source_dir: "/"
+      routes: 
+        - path: '/api'
+  static_sites:
+    - name: 'site'
+      git:
+        branch: main
+        repo_clone_url: https://github.com/ddebarros/sample-functions-stripe.git
+      source_dir: "/"
+      routes:
+        - path: '/'
